@@ -74,14 +74,14 @@ private:
 
 namespace py = pybind11;
 
-PYBIND11_MODULE(PubPrivKey, m)
+PYBIND11_MODULE(GenerateKey, m)
 {
-    m.doc() = "greeting_object 1.0";
+    m.doc() = "GenerateKey 1.0";
     m.def("getVersion", &getVersion, "a function returning the version");
     py::class_<GenerateKey>(m, "GenerateKey")
         .def(py::init())
         .def("initialize", &GenerateKey::initialize)
-        .def("get_private_key", &PubPrivKey::getPrivateKey)
-        .def("get_public_key", &PubPrivKey::getPublicKey);
+        .def("get_private_key", &GenerateKey::getPrivateKey)
+        .def("get_public_key", &GenerateKey::getPublicKey);
 }
 
