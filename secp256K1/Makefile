@@ -1,7 +1,7 @@
 CPPFLAGS += -I /usr/include/python3.7m
 LIBS=-lpython3.7m 
 
-COMPOSANT = PubPrivKey
+COMPOSANT = GenerateKey
 
 LIBSO = ${COMPOSANT}.so
 LIBSO_OBJS = ${COMPOSANT}.o
